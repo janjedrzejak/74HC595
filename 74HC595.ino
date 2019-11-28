@@ -9,7 +9,10 @@ void setup() {
   pinMode(dPin, OUTPUT);
 }
 void loop() {
-    shiftLED(0);
+  for(int i=0; i<8; i++) {
+    shiftLED(i);
+    delay(50);
+  }
 }
 void shiftLED(int p) {
   int pin;
